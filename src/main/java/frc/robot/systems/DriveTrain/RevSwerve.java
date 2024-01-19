@@ -7,9 +7,6 @@ import com.revrobotics.CANSparkLowLevel.MotorType;
 import edu.wpi.first.math.geometry.Rotation2d;
 import edu.wpi.first.math.kinematics.SwerveModulePosition;
 import edu.wpi.first.math.kinematics.SwerveModuleState;
-// import edu.wpi.first.units.Distance;
-// import edu.wpi.first.units.Measure;
-// import edu.wpi.first.units.Velocity;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class RevSwerve {
@@ -59,23 +56,5 @@ public class RevSwerve {
         SmartDashboard.putString(Name + "desiredState", desiredState.angle.toString());
     }
 
-    // public void setDesiredState(SwerveModuleState desiredState) {
-
-    // // Optomize avoids spinning further than 90 degrees
-    // SwerveModuleState state = SwerveModuleState.optimize(desiredState,
-    // new Rotation2d(turningMotor.getSelectedSensorPosition() /
-    // kLampreyEncoderResolution * 2
-    // * Math.PI));
-    // double turnRadians = turningMotor.getSelectedSensorPosition() /
-    // kLampreyEncoderResolution * 2 * Math.PI;
-
-    // turningMotor.set(TalonSRXControlMode.PercentOutput,
-    // (state.angle.getRadians() - turnRadians) / 2);
-
-    // driveMotor.set(TalonFXControlMode.PercentOutput, state.speedMetersPerSecond /
-    // 3);
-
-    // SmartDashboard.putString(Name + "desiredState",
-    // desiredState.angle.toString());
-    // }
+    
 }
